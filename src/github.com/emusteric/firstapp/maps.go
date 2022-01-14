@@ -20,4 +20,9 @@ func main() {
 	fmt.Println(statePopulations)
 	delete(statePopulations, "Georgia")
 	fmt.Println(statePopulations)
+
+	for k, v := range statePopulations {
+		fmt.Println(k, v)
+	}
+
 }
