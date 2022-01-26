@@ -26,7 +26,7 @@ func main() {
 	switch {
 	case x <= 10:
 		fmt.Println("less than or equal to ten")
-		fallthrough
+		fallthrough //watch carefully
 	case x <= 20:
 		fmt.Println("less than or equal to 20")
 	default:

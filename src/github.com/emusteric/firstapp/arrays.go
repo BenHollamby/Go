@@ -16,11 +16,32 @@ func main() {
 
 	students[1] = "aaron"
 	students[2] = "tim"
-	fmt.Printf("Grades: %v\n", students)
+	fmt.Printf("Grades: %v\n", students) //all students in an array
 
 	fmt.Printf("Student #1: %v\n", students[0])
 	fmt.Printf("Student #2: %v\n", students[1])
 	fmt.Printf("Student #3: %v\n", students[2])
 
-	fmt.Printf("Number of Students: %v\n", len(students))
+	fmt.Printf("Number of Students: %v\n", len(students)) //total number of student
+
+	//loop array with index against length
+	test := [6]string{"Stargate", "SG-1", "Atlantis", "Universe", "Voyager", "Next Generation"}
+	for i := 0; i < len(test); i++ {
+		fmt.Println(i, test[i])
+	}
+
+	//loop array with for Range
+	for index, value := range test {
+		fmt.Println(index, value)
+	}
+
+	//blank identifier, ignoring index
+	for _, value := range test {
+		fmt.Println(value)
+	}
+
+	//blank identifier, ignoring value
+	for index, _ := range test {
+		fmt.Println(index)
+	}
 }
