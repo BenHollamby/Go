@@ -30,6 +30,7 @@ func main() {
 		fmt.Println(i, test[i])
 	}
 
+	//PREFERRED
 	//loop array with for Range
 	for index, value := range test {
 		fmt.Println(index, value)
