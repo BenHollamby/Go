@@ -7,8 +7,12 @@ import (
 func main() {
 
 	card := "three"
+	x := "ace"
+	y := "king"
 	value := ParseCard(card)
 	fmt.Println(value)
+	sec := IsBlackjack(x, y)
+	fmt.Println(sec)
 }
 
 func ParseCard(card string) int {
@@ -39,4 +43,14 @@ func ParseCard(card string) int {
 		return 0
 	}
 	panic("Please implement the ParseCard function")
+}
+
+func IsBlackjack(card1, card2 string) bool {
+	switch {
+	case ParseCard(card1)+ParseCard(card2) == 21:
+		return true
+	default:
+		return false
+	}
+	panic("Please implement the IsBlackjack function")
 }
